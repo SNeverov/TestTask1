@@ -1,0 +1,117 @@
+.quiz
+    span
+        font-family: AvenirNextCyr-Medium
+        font-weight: 700
+    &__wrapper
+        width: 1110px
+        margin: 0 auto
+        padding-top: 70px
+        display: flex
+        justify-content: space-between
+    &__descr
+        width: 540px
+        font-size: 30px
+        font-family: AvenirNextCyr-Regular
+        font-weight: 400
+        color: #333333
+        line-height: 37px
+        margin-bottom: 10px
+    &__progress
+        width: 540px
+        height: 173px
+        background: #F6F7F8
+        border-radius: 20px
+        padding: 30px
+        display: grid
+        grid-template-columns: auto auto
+        row-gap: 10px
+        position: sticky
+        top: 20px
+    &__subdescr
+        font-family: AvenirNextCyr-Demi
+        font-weight: 700
+        font-size: 25px
+        color: #878B92
+        width: 334px
+    &__percent
+        font-family: AvenirNextCyr-Demi
+        font-weight: 700
+        font-size: 25px
+        color: #333333
+        text-align: right
+
+    // &__progressbar
+    //     // width: 480px
+    //     height: 12px
+    //     background: #EAECEE
+    //     border-radius: 8px
+    //     grid-column: 1/3
+    // &__load
+    //     // width: 430px
+    //     height: 12px
+    //     background: #FFDD2D
+    //     border-radius: 8px
+
+    &__subtext
+        font-family: AvenirNextCyr-Medium
+        font-weight: 450
+        font-size: 18px
+        color: #333333
+        grid-column: 1/3
+        line-height: 0
+    &__test
+        margin-top: 30px
+        span
+            font-family: AvenirNextCyr-Medium
+            font-weight: 450
+            font-size: 18px
+            line-height: 40px
+            color: #333333
+        label.error
+            font-family: AvenirNextCyr-Regular
+            font-size: 14px
+            color: red
+            display: block
+            margin-left: 42px
+            z-index: 2
+    h3
+        margin-bottom: 20px
+        font-family: AvenirNextCyr-Medium
+        font-weight: 450
+        font-size: 25px
+        color: #878B92
+    &__radio>input
+        position: absolute
+        z-index: -1
+        opacity: 0
+    &__radio>span
+        display: inline-flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+    &__radio>span::before
+        content: ''
+        display: inline-block
+        width: 26px
+        height: 26px
+        flex-shrink: 0
+        flex-grow: 0
+        border-radius: 100%
+        margin-right: 15px
+        background: #EAECEE
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 50% 50%
+        cursor: pointer
+    &__radio>input:not(:disabled):not(:checked)+span:hover::before
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        border: 3px solid #FFDD2D
+        filter: brightness(98%)
+    &__radio>input:checked+span::before
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        border: 3px solid #FFDD2D
+        background: #FFFFFF
